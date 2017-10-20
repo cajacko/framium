@@ -1,0 +1,15 @@
+{
+  "name": "framium",
+  "version": "1.0.0",
+  "description": "Open source displays",
+  "main": "main.js",
+  "productName": "Framium",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . --out=dist"
+  },
+  "devDependencies": {
+    "electron": "1.7.8",
+    "electron-packager": "9.1.0"
+  }
+}
