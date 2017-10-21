@@ -5,11 +5,13 @@
   "main": "main.js",
   "productName": "Framium",
   "scripts": {
-    "start": "electron .",
-    "build": "electron-packager . --out=dist"
+    "start": "electron src/main.js",
+    "build": "electron-packager . --out=dist",
+    "testservice": "http-server testService -p 3000"
   },
   "devDependencies": {
     "electron": "1.7.8",
-    "electron-packager": "9.1.0"
+    "electron-packager": "9.1.0",
+    "http-server": "^0.10.0"
   }
 }
