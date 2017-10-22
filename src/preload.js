@@ -1,11 +1,11 @@
 console.log('test.js');
 
-window.boobies = function() {
+window.boobies = function () {
   console.log('boobies');
 };
 
 const { ipcRenderer } = require('electron');
 
-global.pingHost = message => {
+global.pingHost = (message) => {
   ipcRenderer.sendToHost(message);
 };
