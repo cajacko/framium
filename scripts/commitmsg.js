@@ -1,1 +1,1 @@
-import 'scripts/helpers/addTrelloLinkToCommitMsg';
+// import 'scripts/helpers/addTrelloLinkToCommitMsg';
