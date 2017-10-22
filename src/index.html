@@ -3,14 +3,25 @@
    <head>
      <meta charset="UTF-8">
      <title>Hello World!</title>
+     <style>
+      html, body, .app {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex: 1;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+      }
+     </style>
    </head>
    <body>
-     <h1>Hello World!</h1>
-     <webview
-      id="foo" src="http://localhost:3000/"
-      style="display: flex; flex: 1;"
-      preload="./preload.js"
-     ></webview>
-     <script>require('./renderer.js');</script>
+     <div id="App" class="app"></div>
+     <script>require('../dist/dev/manifest.js');</script>
+     <script>require('../dist/dev/vendor.js');</script>
+     <script>require('../dist/dev/framium.js');</script>
+     <!-- <script src="http://localhost:8081/manifest.js"></script>
+     <script src="http://localhost:8081/vendor.js"></script>
+     <script src="http://localhost:8081/framium.js"></script> -->
    </body>
  </html>

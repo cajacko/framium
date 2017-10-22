@@ -29,3 +29,5 @@ node_modules
 
 // Output build dirs
 dist
+
+.env

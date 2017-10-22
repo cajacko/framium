@@ -64,6 +64,8 @@
     "jest/globals": true
   },
   "globals": {
-    "fetch": false
+    "fetch": false,
+    "document": false,
+    "window": false
   }
 }

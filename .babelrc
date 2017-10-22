@@ -9,7 +9,9 @@
         "alias": {
           "testService": "./testService",
           "src": "./src",
-          "scripts": "./scripts"
+          "scripts": "./scripts",
+          "views": "./src/views",
+          "components": "./src/views/components"
         },
         "extensions": [".js", ".jsx"]
       }

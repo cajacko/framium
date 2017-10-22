@@ -1,22 +1,28 @@
-const path = require('path');
-const webpack = require('webpack');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+require('dotenv').config();
+const plugins = require('./webpack/plugins');
+const output = require('./webpack/output');
+const entry = require('./webpack/entry');
+const devtool = require('./webpack/devtool');
+const webpackModule = require('./webpack/module');
+const resolve = require('./webpack/resolve');
+const devServer = require('./webpack/devServer');
+
+const args = process.argv;
+let isProduction = false;
+
+const skipArg = '--env.production';
+const index = args.indexOf(skipArg);
+
+if (index > -1) {
+  isProduction = true;
+}
 
 module.exports = {
-  entry: {
-    testService: path.join(__dirname, 'testService'),
-  },
-
-  target: 'electron',
-
-  output: {
-    path: path.join(__dirname, 'testService/dist'),
-    filename: 'index.js',
-  },
-
-  plugins: [
-    new CleanWebpackPlugin([path.join(__dirname, 'testService/dist')], {
-      root: process.cwd(),
-    }),
-  ],
+  entry,
+  resolve,
+  devServer: devServer(isProduction),
+  module: webpackModule,
+  output: output(isProduction),
+  devtool: devtool(isProduction),
+  plugins: plugins(isProduction),
 };
