@@ -1,10 +1,9 @@
 import React from 'react';
 import WebView from 'components/WebView/WebView.render';
 
-const App = () => (
+const App = ({ url }) => (
   <div style={{ display: 'flex', flex: 1, flexDirection: 'column' }}>
-    <h1>Container</h1>
-    <WebView src="http://localhost:3000/" />
+    {url ? <WebView src={url} /> : <h1>Add a URL</h1>}
   </div>
 );
 
