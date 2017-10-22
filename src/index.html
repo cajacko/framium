@@ -6,26 +6,11 @@
    </head>
    <body>
      <h1>Hello World!</h1>
-     <webview id="foo" src="http://localhost:3000/" style="display:inline-flex; width:640px; height:480px"></webview>
-
-      <script>
-      onload = () => {
-  const webview = document.querySelector('webview');
-
-  webview.addEventListener('scroll', () => {
-    console.log('scrolling');
-  });
-};
-</script>
-
-     <!-- All of the Node.js APIs are available in this renderer process. -->
-     We are using Node.js <script>document.write(process.versions.node)</script>,
-     Chromium <script>document.write(process.versions.chrome)</script>,
-     and Electron <script>document.write(process.versions.electron)</script>.
-
-     <script>
-     // You can also require other files to run in this process
-require('./renderer.js');
-</script>
+     <webview
+      id="foo" src="http://localhost:3000/"
+      style="display: flex; flex: 1;"
+      preload="./preload.js"
+     ></webview>
+     <script>require('./renderer.js');</script>
    </body>
  </html>

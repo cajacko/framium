@@ -7,7 +7,8 @@
   "scripts": {
     "start": "electron src/main.js",
     "build": "electron-packager . --out=dist",
-    "testservice": "http-server testService -p 3000"
+    "testservice:run": "http-server testService -p 3000 -c-1",
+    "testservice:build": "webpack --progress --colors --watch"
   },
   "devDependencies": {
     "electron": "1.7.8",
