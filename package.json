@@ -5,7 +5,7 @@
   "main": "main.js",
   "productName": "Framium",
   "config": {
-    "trelloboardjson": "https://trello.com/b/Klg6BFuQ/enspire.json"
+    "trelloboardjson": "https://trello.com/b/aUVk7gWt/framium.json"
   },
   "scripts": {
     "start": "electron src/main.js",
