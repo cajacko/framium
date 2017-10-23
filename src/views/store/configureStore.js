@@ -9,4 +9,4 @@ const store = createStore(
   compose(applyMiddleware(thunkMiddleware, logger))
 );
 
-export default store;
+export default () => store;

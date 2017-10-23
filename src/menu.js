@@ -1,4 +1,5 @@
 const { app, Menu } = require('electron');
+const { dispatch } = require('./store');
 
 const template = [
   {
@@ -7,7 +8,8 @@ const template = [
       {
         label: 'Change Service',
         click() {
-          require('electron').shell.openExternal('https://electron.atom.io');
+          console.log('Click Change Service');
+          dispatch({ type: 'SHOW_CHANGE_URL' });
         },
       },
     ],

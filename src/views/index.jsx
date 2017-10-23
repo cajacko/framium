@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import store from 'store/configureStore';
+import getStore from 'store/configureStore';
+import 'store/mainProcessLink';
 import App from 'components/App/App.container';
 
 ReactDOM.render(
-  <Provider store={store}>
+  <Provider store={getStore()}>
     <App />
   </Provider>,
   document.querySelector('#App')
