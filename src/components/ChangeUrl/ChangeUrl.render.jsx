@@ -10,7 +10,19 @@ import {
 
 let id = 0;
 
+/**
+ * The change Url render component. Display the inputs necessary to change the
+ * url
+ *
+ * @type {Class}
+ */
 class ChangeUrlRender extends PureComponent {
+  /**
+   * Initiate the class. Sets a unique ID.
+   *
+   * @param  {Object} props The passed props
+   * @return {Void}       No return value
+   */
   constructor(props) {
     super(props);
 
@@ -18,10 +30,20 @@ class ChangeUrlRender extends PureComponent {
     id += 1;
   }
 
+  /**
+   * Focus on the input when the component mounts
+   *
+   * @return {Void} No return value
+   */
   componentDidMount() {
     this.input.focus();
   }
 
+  /**
+   * Render the component
+   *
+   * @return {component} React component to render
+   */
   render() {
     return (
       <Form onSubmit={this.props.onSubmit}>
