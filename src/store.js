@@ -1,5 +1,5 @@
-const { getMainWindow } = require('./main');
+const mainWindow = require('./mainWindow');
 
 exports.dispatch = (action) => {
-  getMainWindow().webContents.send('dispatch', action);
+  mainWindow.getMainWindow().webContents.send('dispatch', action);
 };
