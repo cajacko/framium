@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - ChangeUrl component, to change the service url
 - Added a menu item to change the url
 - Fixed hot reloading of the react views
+- Persist redux store
 
 ### Changed
 ### Deprecated
