@@ -9,7 +9,6 @@ const template = [
       {
         label: 'Change Service',
         click() {
-          console.log('Click Change Service');
           dispatch(showChangeUrl());
         },
       },
