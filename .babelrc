@@ -14,7 +14,8 @@
           "components": "./src/components",
           "store": "./src/store",
           "reducers": "./src/reducers",
-          "actions": "./src/actions"
+          "actions": "./src/actions",
+          "constants": "./src/constants"
         },
         "extensions": [".js", ".jsx"]
       }

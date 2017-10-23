@@ -1,5 +1,12 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import {
+  Form,
+  Label,
+  Input,
+  Button,
+  Container,
+} from 'components/ChangeUrl/ChangeUrl.style';
 
 let id = 0;
 
@@ -13,17 +20,19 @@ class ChangeUrlRender extends PureComponent {
 
   render() {
     return (
-      <form onSubmit={this.props.onSubmit}>
-        <label htmlFor={this.id}>Change URL</label>
-        <input
-          id={this.id}
-          type="text"
-          value={this.props.url || ''}
-          onChange={this.props.onUrlChange}
-          placeholder="Framium Service URL"
-        />
-        <button type="submit">Set</button>
-      </form>
+      <Form onSubmit={this.props.onSubmit}>
+        <Container>
+          <Label htmlFor={this.id}>Change Service URL</Label>
+          <Input
+            id={this.id}
+            type="text"
+            value={this.props.url || ''}
+            onChange={this.props.onUrlChange}
+            placeholder="Framium Service URL"
+          />
+          <Button type="submit">Set</Button>
+        </Container>
+      </Form>
     );
   }
 }
