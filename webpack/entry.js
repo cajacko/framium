@@ -1,5 +1,5 @@
 // Specify the app entry points
 
 module.exports = {
-  framium: './src/views/index.jsx',
+  framium: './src/view.jsx',
 };

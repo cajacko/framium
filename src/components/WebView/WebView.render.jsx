@@ -1,7 +1,19 @@
 /* eslint no-console: 0 */
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 
-class WebView extends Component {
+/**
+ * Display a webpage and log any console logs
+ *
+ * @type {Class}
+ */
+class WebView extends PureComponent {
+  /**
+   * Add the console listeners, and refresh the view to ignore the cache.
+   * - Need to figure out a better way to ignore the cache.
+   *
+   * @return {Void} No return value
+   */
   componentDidMount() {
     this.webview.addEventListener('console-message', (e) => {
       console.log(e.message);
@@ -21,6 +33,11 @@ class WebView extends Component {
 
   refreshed = false;
 
+  /**
+   * Render the webview
+   *
+   * @return {Component} The react component to render
+   */
   render() {
     return (
       <webview
@@ -34,5 +51,9 @@ class WebView extends Component {
     );
   }
 }
+
+WebView.propTypes = {
+  src: PropTypes.string.isRequired,
+};
 
 export default WebView;
