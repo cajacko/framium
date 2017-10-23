@@ -18,6 +18,8 @@ class ChangeUrl extends PureComponent {
 
   onSubmit(event) {
     event.preventDefault();
+
+    this.props.changeUrl(this.state.url);
   }
 
   render() {
@@ -33,6 +35,7 @@ class ChangeUrl extends PureComponent {
 
 ChangeUrl.propTypes = {
   url: PropTypes.string,
+  changeUrl: PropTypes.func.isRequired,
 };
 
 ChangeUrl.defaultProps = {

@@ -1,5 +1,6 @@
 const { app, Menu } = require('electron');
 const { dispatch } = require('./store');
+const showChangeUrl = require('./actions/showChangeUrl');
 
 const template = [
   {
@@ -9,7 +10,7 @@ const template = [
         label: 'Change Service',
         click() {
           console.log('Click Change Service');
-          dispatch({ type: 'SHOW_CHANGE_URL' });
+          dispatch(showChangeUrl());
         },
       },
     ],

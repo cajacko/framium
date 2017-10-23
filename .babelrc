@@ -11,9 +11,10 @@
           "src": "./src",
           "scripts": "./scripts",
           "views": "./src/views",
-          "components": "./src/views/components",
-          "store": "./src/views/store",
-          "reducers": "./src/views/reducers"
+          "components": "./src/components",
+          "store": "./src/store",
+          "reducers": "./src/reducers",
+          "actions": "./src/actions"
         },
         "extensions": [".js", ".jsx"]
       }

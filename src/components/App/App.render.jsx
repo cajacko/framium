@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import WebView from 'components/WebView/WebView.render';
-import ChangeUrl from 'components/ChangeUrl/ChangeUrl.component';
+import ChangeUrl from 'components/ChangeUrl/ChangeUrl.container';
 
 const App = ({ url, showChangeUrl }) => (
   <div style={{ display: 'flex', flex: 1, flexDirection: 'column' }}>
