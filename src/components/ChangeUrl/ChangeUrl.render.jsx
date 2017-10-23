@@ -18,6 +18,10 @@ class ChangeUrlRender extends PureComponent {
     id += 1;
   }
 
+  componentDidMount() {
+    this.input.focus();
+  }
+
   render() {
     return (
       <Form onSubmit={this.props.onSubmit}>
@@ -25,6 +29,9 @@ class ChangeUrlRender extends PureComponent {
           <Label htmlFor={this.id}>Change Service URL</Label>
           <Input
             id={this.id}
+            innerRef={(input) => {
+              this.input = input;
+            }}
             type="text"
             value={this.props.url || ''}
             onChange={this.props.onUrlChange}
