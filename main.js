@@ -16,7 +16,7 @@ function createWindow() {
   });
 
   // and load the index.html of the app.
-  win.loadURL("https://dev.charliejackson.com");
+  win.loadURL("https://framium.charliejackson.com");
 }
 
 app.on("ready", createWindow);
