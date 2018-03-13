@@ -3,7 +3,15 @@
   "version": "0.1.0",
   "description": "Open source digital display",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "your.id",
+    "mac": {
+      "category": "your.app.category.type"
+    }
   },
   "main": "main.js",
   "repository": "https://github.com/cajacko/framium.git",
