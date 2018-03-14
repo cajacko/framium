@@ -16,7 +16,9 @@ function createWindow() {
   });
 
   // and load the index.html of the app.
-  win.loadURL("https://framium-9.firebaseapp.com/");
+  win.loadURL("https://framium.charliejackson.com/", {
+    extraHeaders: "pragma: no-cache\n"
+  });
 }
 
 app.on("ready", createWindow);
